@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           left: 0;
           right: 0;
           height: 10px;
-          background: var(--color-bg);
+          background:rgb(19, 91, 167);
           z-index: 1000;
           overflow: hidden;
           padding: 1.5rem 0;

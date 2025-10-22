@@ -25,29 +25,6 @@ h3 {
   margin: 0;
 }
 
-a {
-  color: #ff6500;
-  text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-a:hover {
-  color: #ffa559;
-}
-
-/* Header Styles - Simplified */
-header {
-  width: 100%;
-  position: relative;
-}
-
-/* Decorative background elements */
-.bg-decoration {
-  position: fixed;
-  pointer-events: none;
-  z-index: -1;
-}
-
 @keyframes float {
   0%,
   100% {

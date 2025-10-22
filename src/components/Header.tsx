@@ -21,6 +21,7 @@ const Header: React.FC = () => {
           font-size: 12rem;
           font-weight: 400;
           margin: 0;
+          padding: 0;
           margin-top: -2.5rem;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
