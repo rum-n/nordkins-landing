@@ -1,8 +1,9 @@
 import React from "react";
+import { useTranslation } from "../i18n/useTranslation";
 
 const Footer: React.FC = () => {
-  const tickerText =
-    "Let's create something awesome together • Get in touch at contact@nordkins.com • ";
+  const { t } = useTranslation();
+  const tickerText = t.footer.ticker;
 
   return (
     <footer className="footer-ticker">

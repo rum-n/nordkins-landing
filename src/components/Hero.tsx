@@ -1,13 +1,13 @@
 import React from "react";
+import { useTranslation } from "../i18n/useTranslation";
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="hero">
       <div className={`hero-tagline`}>
-        <h2>
-          Partnering with ambitious businesses to craft exceptional digital
-          experiences
-        </h2>
+        <h2>{t.hero.tagline}</h2>
       </div>
       <style>{`
         .hero {
@@ -15,6 +15,7 @@ const Hero: React.FC = () => {
           display: flex;
           align-items: center;
           justify-content: left;
+          margin-top: 100px;
         }
 
         .hero-tagline {

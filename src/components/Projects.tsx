@@ -1,37 +1,57 @@
 import React from "react";
+import { useTranslation } from "../i18n/useTranslation";
 import bv from "../assets/bv.png";
 import df from "../assets/df.jpeg";
 import vrd from "../assets/vrd.png";
+import rjm from "../assets/rjm.png";
+import devf from "../assets/devf.png";
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation();
+
   const projects = [
     {
       id: 1,
-      title: "Landing page and salary calculator",
-      description:
-        "Landing page and salary calculator for the United Services Union in Germany.",
+      title: t.projects.vrd.title,
+      description: t.projects.vrd.description,
       image: vrd,
       link: "https://vrd.de",
     },
     {
       id: 2,
-      title: "Marketing agency homepage",
-      description:
-        "Completely redesigned the website and overhauled the content mangement system of a marketing agency based in Sweden.",
+      title: t.projects.bv.title,
+      description: t.projects.bv.description,
       image: bv,
       link: "https://brightvision.com",
     },
     {
       id: 3,
-      title: "NFT mint landing page",
-      description:
-        "Landing page and Solidity smart contract to mint an ugly NFT collection. But hey, we're not here to judge.",
+      title: t.projects.df.title,
+      description: t.projects.df.description,
       image: df,
+    },
+  ];
+
+  const internalProjects = [
+    {
+      id: 1,
+      title: t.projects.rjm.title,
+      description: t.projects.rjm.description,
+      image: rjm,
+      link: "https://remotejobmatching.com",
+    },
+    {
+      id: 2,
+      title: t.projects.devf.title,
+      description: t.projects.devf.description,
+      image: devf,
+      link: "https://devjobflashcards.com",
     },
   ];
 
   return (
     <section id="projects" className="projects">
+      <h2 className="projects-title">{t.projects.clientTitle}</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
@@ -48,7 +68,31 @@ const Projects: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Link
+                  {t.projects.link}
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2 className="projects-title">{t.projects.internalTitle}</h2>
+      <div className="projects-grid">
+        {internalProjects.map((project) => (
+          <div key={project.id} className="internal-project-card">
+            <div className="project-image">
+              <img src={project.image} alt={project.title} />
+            </div>
+            <div className="project-info">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              {project.link && (
+                <a
+                  href={project.link}
+                  className="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.projects.link}
                 </a>
               )}
             </div>
@@ -61,16 +105,79 @@ const Projects: React.FC = () => {
           margin: 0 auto;
         }
 
+        .projects-title {
+          font-size: 2rem;
+          font-weight: 600;
+          color: var(--color-text);
+          margin: 0 0 2rem 0;
+          text-align: left;
+        }
+
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
+          margin-bottom: 2rem;
         }
 
-        .project-card {
-          background: var(--color-secondary);
-          border-radius: 2px;
-        }
+         .project-card, .internal-project-card {
+           border-radius: 2px;
+           transition: transform 0.3s ease;
+         }
+
+         .project-card:hover, .internal-project-card:hover {
+           transform: scale(1.02);
+         }
+
+         /* Funky colors for client projects */
+         .project-card:nth-child(1) {
+           background: #E49FA4;
+         }
+
+         .project-card:nth-child(2) {
+           background: #B2ADAB;
+         }
+
+         .project-card:nth-child(3) {
+           background: #4DA555;
+         }
+
+         .project-card:nth-child(4) {
+           background: #95E1D3;
+         }
+
+         .project-card:nth-child(5) {
+           background: #C7CEEA;
+         }
+
+         .project-card:nth-child(6) {
+           background: #FF9A76;
+         }
+
+         /* Funky colors for internal projects */
+         .internal-project-card:nth-child(1) {
+           background: #CCF7D7;
+         }
+
+         .internal-project-card:nth-child(2) {
+           background: #ED7470;
+         }
+
+         .internal-project-card:nth-child(3) {
+           background: #6BCB77;
+         }
+
+         .internal-project-card:nth-child(4) {
+           background: #FF6B6B;
+         }
+
+         .internal-project-card:nth-child(5) {
+           background: #4D96FF;
+         }
+
+         .internal-project-card:nth-child(6) {
+           background: #FDA7DF;
+         }
 
         .project-image {
           width: 100%;

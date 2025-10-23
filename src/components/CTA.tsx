@@ -1,17 +1,17 @@
 import React from "react";
+import { useTranslation } from "../i18n/useTranslation";
 
 const CTA: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="cta-section">
       <div className="cta-container">
         <div className="cta-glow"></div>
-        <h2 className="cta-title">Let's Build Something Amazing Together</h2>
-        <p className="cta-description">
-          Ready to transform your ideas into reality? Let's create something
-          extraordinary.
-        </p>
+        <h2 className="cta-title">{t.cta.title}</h2>
+        <p className="cta-description">{t.cta.description}</p>
         <button className="cta-button">
-          Start Your Project
+          {t.cta.button}
           <span className="cta-arrow">→</span>
         </button>
       </div>
@@ -26,10 +26,6 @@ const CTA: React.FC = () => {
           position: relative;
           max-width: 900px;
           margin: 0 auto;
-          padding: 4rem 3rem;
-          background: linear-gradient(135deg, rgba(30, 62, 98, 0.3) 0%, rgba(255, 101, 0, 0.1) 100%);
-          border: 2px solid rgba(255, 101, 0, 0.3);
-          border-radius: 24px;
           animation: scaleIn 0.8s ease-out;
           backdrop-filter: blur(10px);
         }
@@ -41,7 +37,7 @@ const CTA: React.FC = () => {
           transform: translate(-50%, -50%);
           width: 300px;
           height: 300px;
-          background: radial-gradient(circle, rgba(255, 101, 0, 0.3) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(22, 158, 215, 0.3) 0%, transparent 70%);
           filter: blur(60px);
           animation: pulse 3s ease-in-out infinite;
         }
@@ -82,10 +78,12 @@ const CTA: React.FC = () => {
           display: inline-flex;
           align-items: center;
           gap: 0.8rem;
+          background: var(--color-accent);
+          color: var(--color-bg);
+          border-radius: 50px;
           animation: fadeInUp 0.8s ease-out 0.6s both;
-          background: linear-gradient(135deg, #FF6500 0%, #FFA559 100%);
           border: none;
-          box-shadow: 0 10px 30px rgba(255, 101, 0, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 191, 255, 0.4);
         }
 
         .cta-arrow {
@@ -99,7 +97,7 @@ const CTA: React.FC = () => {
         }
 
         .cta-button:hover {
-          box-shadow: 0 15px 40px rgba(255, 101, 0, 0.6);
+          box-shadow: 0 15px 40px rgba(0, 191, 255, 0.6);
         }
 
         @media (max-width: 768px) {
