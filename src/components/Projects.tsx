@@ -113,6 +113,13 @@ const Projects: React.FC = () => {
           text-align: left;
         }
 
+        @media (max-width: 768px) {
+          .projects-title {
+            font-size: 1.2rem;
+            margin: 0 0 1rem 0;
+          }
+        }
+
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);

@@ -34,6 +34,7 @@ const Header: React.FC = () => {
         @media (max-width: 768px) {
           .main-header {
             padding: 0 0.5rem 2rem;
+            margin-top: 1.6rem;
           }
 
           .brand-title {

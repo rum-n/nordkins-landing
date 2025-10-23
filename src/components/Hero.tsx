@@ -1,25 +1,31 @@
 import React from "react";
 import { useTranslation } from "../i18n/useTranslation";
+import RippleAnimation from "./RippleAnimation";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <section className="hero">
+      <RippleAnimation />
       <div className={`hero-tagline`}>
         <h2>{t.hero.tagline}</h2>
       </div>
       <style>{`
         .hero {
+          position: relative;
           min-height: 80vh;
           display: flex;
           align-items: center;
           justify-content: left;
           margin-top: 100px;
+          overflow: hidden;
         }
 
         .hero-tagline {
           max-width: 1000px;
+          position: relative;
+          z-index: 1;
         }
 
         .hero-tagline h2 {
