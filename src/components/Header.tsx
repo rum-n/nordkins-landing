@@ -16,13 +16,13 @@ const Header: React.FC = () => {
         }
 
         .brand-title {
-          position: fixed;
+          // position: fixed;
           font-family: 'Montserrat', sans-serif;
-          font-size: 12rem;
-          font-weight: 400;
+          font-size: 10rem;
+          font-weight: 600;
           margin: 0;
           padding: 0;
-          margin-top: -2.5rem;
+          margin-top: -2rem;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;

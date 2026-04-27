@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer-ticker">
-      <div className="ticker-wrapper">
+      {/* <div className="ticker-wrapper">
         <div className="ticker-content">
           {tickerText}
           {tickerText}
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             font-size: 0.85rem;
           }
         }
-      `}</style>
+      `}</style> */}
     </footer>
   );
 };

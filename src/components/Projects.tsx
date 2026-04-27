@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
       title: t.projects.vrd.title,
       description: t.projects.vrd.description,
       image: vrd,
-      link: "https://vrd.de",
+      link: "https://eingruppierungscheck-verdi.de/",
     },
     {
       id: 2,
