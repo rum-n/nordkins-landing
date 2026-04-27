@@ -3,6 +3,7 @@ import { useTranslation } from "../i18n/useTranslation";
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
+  const [featuredProject, ...secondaryProjects] = t.projects.cases;
 
   return (
     <section id="services" className="institutional-sections">
@@ -42,8 +43,38 @@ const Projects: React.FC = () => {
           <p className="section-kicker">{t.projects.workTitle}</p>
           <h2>{t.projects.workIntro}</h2>
         </div>
+        <article className="featured-work">
+          <div className="featured-work-copy">
+            <p className="featured-work-label">{t.projects.featuredLabel}</p>
+            <h3>{featuredProject.title}</h3>
+            <p className="featured-work-meta">{t.projects.featuredMeta}</p>
+            <p className="work-description">{featuredProject.description}</p>
+            <p className="work-outcome">{featuredProject.outcome}</p>
+            <ul className="featured-work-details">
+              {t.projects.featuredDetails.map((detail) => (
+                <li key={detail}>{detail}</li>
+              ))}
+            </ul>
+            {"link" in featuredProject ? (
+              <a
+                href={featuredProject.link}
+                className="work-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {featuredProject.linkLabel}
+              </a>
+            ) : (
+              <span className="work-label">{featuredProject.linkLabel}</span>
+            )}
+          </div>
+        </article>
+
+        <div className="secondary-work-heading">
+          <p>{t.projects.moreWorkTitle}</p>
+        </div>
         <div className="work-grid">
-          {t.projects.cases.map((project) => (
+          {secondaryProjects.map((project) => (
             <article key={project.title} className="work-card">
               <h3>{project.title}</h3>
               <p className="work-description">{project.description}</p>
@@ -127,7 +158,7 @@ const Projects: React.FC = () => {
         }
 
         .work-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .sector-card,
@@ -183,6 +214,92 @@ const Projects: React.FC = () => {
           margin-bottom: 1rem;
         }
 
+        .featured-work {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr);
+          gap: 1.75rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .featured-work-copy {
+          max-width: 52rem;
+        }
+
+        .featured-work-label,
+        .secondary-work-heading p {
+          font-size: 0.78rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--color-accent);
+          font-weight: 700;
+        }
+
+        .featured-work h3 {
+          font-size: clamp(1.8rem, 4vw, 2.8rem);
+          line-height: 1.12;
+          margin: 0.5rem 0 0.85rem;
+        }
+
+        .featured-work-meta {
+          color: var(--color-brand);
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .featured-work-details {
+          list-style: none;
+          display: grid;
+          gap: 0.75rem;
+          margin: 0 0 1.5rem;
+          padding: 1.2rem 0 0;
+          position: relative;
+        }
+
+        .featured-work-details::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4rem;
+          height: 1px;
+          background: rgba(143, 106, 47, 0.45);
+        }
+
+        .featured-work-details li {
+          position: relative;
+          padding-left: 1rem;
+          color: var(--color-muted);
+          line-height: 1.7;
+        }
+
+        .featured-work-details li::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0.72rem;
+          width: 0.38rem;
+          height: 0.38rem;
+          border-radius: 999px;
+          background: var(--color-accent);
+          transform: translateY(-50%);
+        }
+
+        .secondary-work-heading {
+          margin-bottom: 1.25rem;
+          padding-top: 1.25rem;
+          position: relative;
+        }
+
+        .secondary-work-heading::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4rem;
+          height: 1px;
+          background: rgba(143, 106, 47, 0.45);
+        }
+
         .work-outcome {
           padding-top: 1rem;
           position: relative;
@@ -220,6 +337,19 @@ const Projects: React.FC = () => {
           .services-grid,
           .work-grid {
             grid-template-columns: 1fr;
+          }
+
+          .featured-work {
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+          }
+
+          .featured-work-copy {
+            max-width: none;
+          }
+
+          .featured-work-visual {
+            min-height: 0;
           }
 
           .sector-card,

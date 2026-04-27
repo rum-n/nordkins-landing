@@ -26,9 +26,21 @@ export const translations = {
         "Service portals and calculators",
       ],
       metrics: [
-        { value: "German market", label: "Focused on organizations serving members, citizens, and regulated stakeholders" },
-        { value: "Bilingual", label: "English and German delivery for teams, boards, and external audiences" },
-        { value: "Serious by design", label: "Information architecture and visual systems built for credibility" },
+        {
+          value: "German market",
+          label:
+            "Focused on organizations serving members, citizens, and regulated stakeholders",
+        },
+        {
+          value: "Bilingual",
+          label:
+            "English and German delivery for teams, boards, and external audiences",
+        },
+        {
+          value: "Serious by design",
+          label:
+            "Information architecture and visual systems built for credibility",
+        },
       ],
     },
     projects: {
@@ -75,12 +87,21 @@ export const translations = {
       workTitle: "Selected work",
       workIntro:
         "A sample of digital work relevant to organizations that need authority, usability, and measurable service value.",
+      featuredLabel: "Featured project",
+      featuredMeta: "Union / Member service / Germany",
+      featuredDetails: [
+        "Concept and implementation of a public-facing landing page",
+        "Calculator experience for compensation-related member questions",
+        "Clear service communication for a large German union audience",
+      ],
+      moreWorkTitle: "Further work",
       cases: [
         {
           title: "Salary calculator for a German union",
           description:
             "Landing page and calculator experience that helped members understand compensation-related questions more clearly.",
-          outcome: "Combined public-facing explanation with a practical self-service tool.",
+          outcome:
+            "Combined public-facing explanation with a practical self-service tool.",
           link: "https://eingruppierungscheck-verdi.de/",
           linkLabel: "Open project",
         },
@@ -88,7 +109,8 @@ export const translations = {
           title: "Website relaunch and CMS overhaul",
           description:
             "Restructured content and rebuilt the publishing experience for an established agency with operational needs across teams.",
-          outcome: "Improved maintainability and made the site easier to manage internally.",
+          outcome:
+            "Improved maintainability and made the site easier to manage internally.",
           link: "https://brightvision.com",
           linkLabel: "Open project",
         },
@@ -96,13 +118,15 @@ export const translations = {
           title: "Product work with complex flows",
           description:
             "Internal digital products that required careful UX decisions, clear pathways, and stable front-end implementation.",
-          outcome: "Applied the same delivery discipline used in member-facing and service-oriented environments.",
+          outcome:
+            "Applied the same delivery discipline used in member-facing and service-oriented environments.",
           linkLabel: "Internal work",
         },
       ],
     },
     cta: {
-      title: "Need a digital partner who understands institutional expectations?",
+      title:
+        "Need a digital partner who understands institutional expectations?",
       description:
         "We work with organizations that value clarity, seriousness, and reliable delivery. If you are planning a relaunch, service tool, or member-facing platform, we would be glad to speak.",
       button: "Contact Nordkins",
@@ -144,9 +168,21 @@ export const translations = {
         "Service-Portale und Rechner",
       ],
       metrics: [
-        { value: "Fokus Deutschland", label: "Ausgerichtet auf Organisationen mit Mitgliedern, Bürgern und regulierten Stakeholdern" },
-        { value: "Zweisprachig", label: "Umsetzung auf Deutsch und Englisch für Teams, Gremien und externe Zielgruppen" },
-        { value: "Seriös gestaltet", label: "Informationsarchitektur und Gestaltung mit Blick auf Glaubwürdigkeit" },
+        {
+          value: "Fokus Deutschland",
+          label:
+            "Ausgerichtet auf Organisationen mit Mitgliedern, Bürgern und regulierten Stakeholdern",
+        },
+        {
+          value: "Zweisprachig",
+          label:
+            "Umsetzung auf Deutsch und Englisch für Teams, Gremien und externe Zielgruppen",
+        },
+        {
+          value: "Seriös gestaltet",
+          label:
+            "Informationsarchitektur und Gestaltung mit Blick auf Glaubwürdigkeit",
+        },
       ],
     },
     projects: {
@@ -193,12 +229,21 @@ export const translations = {
       workTitle: "Ausgewählte Arbeiten",
       workIntro:
         "Eine Auswahl digitaler Arbeiten für Organisationen, die Autorität, Nutzbarkeit und konkreten Servicewert brauchen.",
+      featuredLabel: "Im Fokus",
+      featuredMeta: "Gewerkschaft / Mitgliederservice / Deutschland",
+      featuredDetails: [
+        "Konzeption und Umsetzung einer öffentlich zugänglichen Landingpage",
+        "Rechner für vergütungsbezogene Fragen von Mitgliedern",
+        "Klare Service-Kommunikation für eine große gewerkschaftliche Zielgruppe in Deutschland",
+      ],
+      moreWorkTitle: "Weitere Arbeiten",
       cases: [
         {
           title: "Gehaltsrechner für eine deutsche Gewerkschaft",
           description:
-            "Landingpage und Rechner, die Mitgliedern halfen, Fragen zur Vergütung schneller und verständlicher einzuordnen.",
-          outcome: "Verbindet öffentliche Erläuterung mit einem konkreten Self-Service-Werkzeug.",
+            "Landingpage und Rechner, die Mitgliedern helfen, Fragen zur Vergütung schneller und verständlicher einzuordnen.",
+          outcome:
+            "Verbindet öffentliche Erläuterung mit einem konkreten Self-Service-Werkzeug.",
           link: "https://eingruppierungscheck-verdi.de/",
           linkLabel: "Projekt ansehen",
         },
@@ -206,7 +251,8 @@ export const translations = {
           title: "Website-Relaunch und CMS-Überarbeitung",
           description:
             "Neu strukturierte Inhalte und erneuerte Publishing-Prozesse für eine etablierte Agentur mit operativen Anforderungen über mehrere Teams hinweg.",
-          outcome: "Verbesserte Pflegefähigkeit und vereinfachte interne Inhaltsverwaltung.",
+          outcome:
+            "Verbesserte Pflegefähigkeit und vereinfachte interne Inhaltsverwaltung.",
           link: "https://brightvision.com",
           linkLabel: "Projekt ansehen",
         },
@@ -214,13 +260,15 @@ export const translations = {
           title: "Produktarbeit mit komplexen Abläufen",
           description:
             "Interne digitale Produkte mit anspruchsvollen Nutzerführungen, klaren Wegen und stabiler Frontend-Umsetzung.",
-          outcome: "Dieselbe Umsetzungsdisziplin wie bei mitglieder- und serviceorientierten Plattformen.",
+          outcome:
+            "Dieselbe Umsetzungsdisziplin wie bei mitglieder- und serviceorientierten Plattformen.",
           linkLabel: "Interne Arbeit",
         },
       ],
     },
     cta: {
-      title: "Sie suchen einen digitalen Partner mit Verständnis für institutionelle Anforderungen?",
+      title:
+        "Sie suchen einen digitalen Partner mit Verständnis für institutionelle Anforderungen?",
       description:
         "Wir arbeiten mit Organisationen, die Klarheit, Seriosität und verlässliche Umsetzung schätzen. Wenn Sie einen Relaunch, ein Service-Tool oder eine mitgliederorientierte Plattform planen, sprechen wir gern mit Ihnen.",
       button: "Nordkins kontaktieren",
