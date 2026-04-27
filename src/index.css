@@ -1,27 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap");
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  color: #122033;
+  background: #edf1f5;
+  color-scheme: light;
 
-  /* Nordkins Agency Color Palette - New Modern Design */
-  --color-bg: #2d3250;
-  --color-bg-secondary: #424769;
-  --color-primary: #7077a1;
-  --color-secondary: #f6b17a;
-
-  --color-accent: #97f67a;
-  --color-text: #f5f5f5;
-
-  color-scheme: dark;
-  color: var(--color-text);
+  --color-page: #edf1f5;
+  --color-surface: #f8fafc;
+  --color-surface-strong: #ffffff;
+  --color-ink: #122033;
+  --color-muted: #5b6675;
+  --color-border: #cfd7e3;
+  --color-border-strong: #aeb8c5;
+  --color-brand: #19324d;
+  --color-brand-soft: #2c4b6f;
+  --color-accent: #8f6a2f;
+  --color-accent-soft: #efe2c9;
+  --shadow-soft: 0 14px 40px rgba(18, 32, 51, 0.08);
+  --shadow-line: 0 1px 0 rgba(18, 32, 51, 0.08);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   scroll-behavior: smooth;
 }
 
@@ -31,94 +35,45 @@
   box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: var(--color-secondary);
-  text-decoration: inherit;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-}
-
-a:hover {
-  color: var(--color-accent);
-  transform: translateY(-2px);
+html {
+  min-width: 320px;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  color: var(--color-text);
-  overflow-x: hidden;
-  background-color: #202020;
+  background:
+    radial-gradient(circle at top left, rgba(143, 106, 47, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(143, 106, 47, 0.06), transparent 34%),
+    linear-gradient(180deg, #f7f9fb 0%, #edf1f5 100%);
+  color: var(--color-ink);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  background: var(--color-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+a {
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-h2 {
-  font-size: 2.5em;
-  line-height: 1.2;
+a:hover {
+  color: var(--color-brand-soft);
 }
 
-/* Smooth entrance animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+button {
+  cursor: pointer;
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Source Serif 4", serif;
+  letter-spacing: -0.02em;
 }

@@ -5,121 +5,97 @@ const CTA: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="cta-section">
-      <div className="cta-container">
-        <div className="cta-glow"></div>
-        <h2 className="cta-title">{t.cta.title}</h2>
-        <p className="cta-description">{t.cta.description}</p>
-        <button className="cta-button">
-          {t.cta.button}
-          <span className="cta-arrow">→</span>
-        </button>
+    <section id="contact" className="cta-section">
+      <div className="cta-panel">
+        <div className="cta-copy">
+          <p className="cta-kicker">{t.header.nav.contact}</p>
+          <h2>{t.cta.title}</h2>
+          <p>{t.cta.description}</p>
+        </div>
+        <div className="cta-actions">
+          <a className="cta-button" href={`mailto:${t.cta.emailLabel}`}>
+            {t.cta.button}
+          </a>
+          <a className="cta-email" href={`mailto:${t.cta.emailLabel}`}>
+            {t.cta.emailLabel}
+          </a>
+        </div>
       </div>
+
       <style>{`
         .cta-section {
-          position: relative;
-          padding: 8rem 2rem !important;
-          overflow: hidden;
+          padding: 0;
         }
 
-        .cta-container {
-          position: relative;
-          max-width: 900px;
-          margin: 0 auto;
-          animation: scaleIn 0.8s ease-out;
-          backdrop-filter: blur(10px);
+        .cta-panel {
+          display: grid;
+          grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+          gap: 2rem;
+          padding: 2.5rem;
+          background: var(--color-brand);
+          color: white;
+          box-shadow: var(--shadow-soft);
         }
 
-        .cta-glow {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 300px;
-          height: 300px;
-          background: radial-gradient(circle, rgba(22, 158, 215, 0.3) 0%, transparent 70%);
-          filter: blur(60px);
-          animation: pulse 3s ease-in-out infinite;
+        .cta-kicker {
+          font-size: 0.82rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.72);
+          font-weight: 700;
+          margin-bottom: 0.9rem;
         }
 
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 0.5;
-            transform: translate(-50%, -50%) scale(1);
-          }
-          50% {
-            opacity: 0.8;
-            transform: translate(-50%, -50%) scale(1.2);
-          }
+        .cta-copy h2 {
+          font-size: clamp(1.9rem, 4vw, 3rem);
+          margin-bottom: 1rem;
+          line-height: 1.15;
         }
 
-        .cta-title {
-          font-size: 3rem;
-          margin-bottom: 1.5rem;
-          position: relative;
-          z-index: 1;
-          animation: fadeInUp 0.8s ease-out 0.2s both;
+        .cta-copy p {
+          max-width: 62ch;
+          color: rgba(255, 255, 255, 0.82);
+          line-height: 1.8;
         }
 
-        .cta-description {
-          font-size: 1.3rem;
-          color: rgba(255, 255, 255, 0.8);
-          margin-bottom: 3rem;
-          position: relative;
-          z-index: 1;
-          animation: fadeInUp 0.8s ease-out 0.4s both;
+        .cta-actions {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 1rem;
         }
 
         .cta-button {
-          position: relative;
-          z-index: 1;
-          padding: 1.2rem 3rem;
-          font-size: 1.2rem;
           display: inline-flex;
           align-items: center;
-          gap: 0.8rem;
+          justify-content: center;
+          min-height: 3rem;
+          padding: 0.85rem 1.3rem;
           background: var(--color-accent);
-          color: var(--color-bg);
-          border-radius: 50px;
-          animation: fadeInUp 0.8s ease-out 0.6s both;
-          border: none;
-          box-shadow: 0 10px 30px rgba(0, 191, 255, 0.4);
-        }
-
-        .cta-arrow {
-          display: inline-block;
-          transition: transform 0.3s ease;
-          font-size: 1.5rem;
-        }
-
-        .cta-button:hover .cta-arrow {
-          transform: translateX(5px);
+          color: white;
+          font-weight: 700;
+          border-radius: 999px;
         }
 
         .cta-button:hover {
-          box-shadow: 0 15px 40px rgba(0, 191, 255, 0.6);
+          color: white;
+          opacity: 0.92;
         }
 
-        @media (max-width: 768px) {
-          .cta-section {
-            padding: 4rem 1.5rem !important;
-          }
+        .cta-email {
+          color: rgba(255, 255, 255, 0.82);
+          font-weight: 500;
+        }
 
-          .cta-container {
-            padding: 3rem 2rem;
-          }
+        .cta-email:hover {
+          color: white;
+        }
 
-          .cta-title {
-            font-size: 2rem;
-          }
-
-          .cta-description {
-            font-size: 1.1rem;
-          }
-
-          .cta-button {
-            padding: 1rem 2rem;
-            font-size: 1rem;
+        @media (max-width: 900px) {
+          .cta-panel {
+            grid-template-columns: 1fr;
+            padding: 2rem 1.5rem;
           }
         }
       `}</style>

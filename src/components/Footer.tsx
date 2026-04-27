@@ -3,66 +3,85 @@ import { useTranslation } from "../i18n/useTranslation";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  const tickerText = t.footer.ticker;
 
   return (
-    <footer className="footer-ticker">
-      {/* <div className="ticker-wrapper">
-        <div className="ticker-content">
-          {tickerText}
-          {tickerText}
-          {tickerText}
-          {tickerText}
+    <footer className="site-footer">
+      <div className="site-footer-inner">
+        <p className="footer-statement">{t.footer.statement}</p>
+        <div className="footer-meta">
+          <p>
+            <span>{t.footer.contactLabel}</span>
+            <a href={`mailto:${t.cta.emailLabel}`}>{t.cta.emailLabel}</a>
+          </p>
+          <p>
+            <span>{t.footer.focusLabel}</span>
+            {t.footer.focusValue}
+          </p>
         </div>
       </div>
+
       <style>{`
-        .footer-ticker {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 10px;
-          background:rgb(19, 91, 167);
-          z-index: 1000;
-          overflow: hidden;
-          padding: 1.5rem 0;
-          text-transform: uppercase;
+        .site-footer {
+          width: min(1120px, calc(100% - 3rem));
+          margin: 0 auto;
+          padding: 0 0 2.5rem;
         }
 
-        .ticker-wrapper {
-          height: 100%;
+        .site-footer-inner {
           display: flex;
-          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+          padding-top: 1.5rem;
+          position: relative;
         }
 
-        .ticker-content {
-          display: inline-block;
-          white-space: nowrap;
-          animation: ticker 30s linear infinite;
-          font-size: 0.8rem;
-          color: var(--color-text);
-          letter-spacing: 0.05em;
+        .site-footer-inner::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: min(100%, 7rem);
+          height: 1px;
+          background: rgba(143, 106, 47, 0.5);
         }
 
-        @keyframes ticker {
-          0% {
-            transform: translate3d(0, 0, 0);
-          }
-          100% {
-            transform: translate3d(-50%, 0, 0);
-          }
+        .footer-statement {
+          max-width: 36ch;
+          color: var(--color-muted);
+          line-height: 1.7;
+        }
+
+        .footer-meta {
+          display: grid;
+          gap: 0.8rem;
+          max-width: 40ch;
+        }
+
+        .footer-meta p {
+          color: var(--color-muted);
+          line-height: 1.7;
+        }
+
+        .footer-meta span {
+          display: block;
+          font-size: 0.78rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--color-accent);
+          font-weight: 700;
+          margin-bottom: 0.2rem;
         }
 
         @media (max-width: 768px) {
-          .footer-ticker {
-            height: 20px;
+          .site-footer {
+            width: min(100% - 2rem, 1120px);
           }
 
-          .ticker-content {
-            font-size: 0.85rem;
+          .site-footer-inner {
+            flex-direction: column;
           }
         }
-      `}</style> */}
+      `}</style>
     </footer>
   );
 };
