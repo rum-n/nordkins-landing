@@ -16,9 +16,7 @@ const CTA: React.FC = () => {
           <a className="cta-button" href={`mailto:${t.cta.emailLabel}`}>
             {t.cta.button}
           </a>
-          <a className="cta-email" href={`mailto:${t.cta.emailLabel}`}>
-            {t.cta.emailLabel}
-          </a>
+          <p className="cta-email">{t.cta.emailLabel}</p>
         </div>
       </div>
 
