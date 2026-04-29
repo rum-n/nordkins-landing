@@ -129,7 +129,20 @@ export const translations = {
         "Need a digital partner who understands institutional expectations?",
       description:
         "We work with organizations that value clarity, seriousness, and reliable delivery. If you are planning a relaunch, service tool, or member-facing platform, we would be glad to speak.",
-      button: "Contact Nordkins",
+      button: "Send inquiry",
+      submitting: "Sending...",
+      nameLabel: "Name",
+      namePlaceholder: "Your name",
+      emailFieldLabel: "Email",
+      emailPlaceholder: "you@organization.com",
+      messageLabel: "Project details",
+      messagePlaceholder:
+        "Tell us a bit about your organization, timeline, or the platform you want to build.",
+      successMessage:
+        "Your message has been sent. We will get back to you shortly.",
+      errorMessage:
+        "Something went wrong while sending your message. Please try again or email us directly.",
+      subject: "New Nordkins website inquiry",
       emailLabel: "contact@nordkins.com",
     },
     footer: {
@@ -271,7 +284,20 @@ export const translations = {
         "Sie suchen einen digitalen Partner mit Verständnis für institutionelle Anforderungen?",
       description:
         "Wir arbeiten mit Organisationen, die Klarheit, Seriosität und verlässliche Umsetzung schätzen. Wenn Sie einen Relaunch, ein Service-Tool oder eine mitgliederorientierte Plattform planen, sprechen wir gern mit Ihnen.",
-      button: "Nordkins kontaktieren",
+      button: "Anfrage senden",
+      submitting: "Wird gesendet...",
+      nameLabel: "Name",
+      namePlaceholder: "Ihr Name",
+      emailFieldLabel: "E-Mail",
+      emailPlaceholder: "sie@organisation.de",
+      messageLabel: "Projektanliegen",
+      messagePlaceholder:
+        "Beschreiben Sie kurz Ihre Organisation, den Zeitrahmen oder die Plattform, die Sie planen.",
+      successMessage:
+        "Ihre Nachricht wurde gesendet. Wir melden uns in Kürze.",
+      errorMessage:
+        "Beim Senden ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.",
+      subject: "Neue Anfrage über die Nordkins-Website",
       emailLabel: "contact@nordkins.com",
     },
     footer: {
