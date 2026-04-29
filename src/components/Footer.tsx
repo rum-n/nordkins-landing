@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
       <div className="site-footer-inner">
         <p className="footer-statement">{t.footer.statement}</p>
         <div className="footer-meta">
-          <p>
+          {/* <p>
             <span>{t.footer.contactLabel}</span>
             <a href={`mailto:${t.cta.emailLabel}`}>{t.cta.emailLabel}</a>
-          </p>
+          </p> */}
           <p>
             <span>{t.footer.focusLabel}</span>
             {t.footer.focusValue}

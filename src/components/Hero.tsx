@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="top" className="hero">
+    <section id="top">
       <div className="hero-panel">
         <div className="hero-copy">
           <p className="hero-eyebrow">{t.hero.eyebrow}</p>
@@ -28,18 +28,14 @@ const Hero: React.FC = () => {
           </ul>
         </div>
         <div className="hero-image-wrap" aria-hidden="true">
-          <img className="hero-image" src="/de-hero.jpg" alt="" />
+          <img className="hero-image" src="/demo2.jpg" alt="" />
         </div>
       </div>
 
       <style>{`
-        .hero {
-          padding-top: 1rem;
-        }
-
         .hero-panel {
           display: grid;
-          grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+          grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1.5fr);
           gap: 2rem;
           align-items: start;
         }
@@ -57,11 +53,9 @@ const Hero: React.FC = () => {
           margin-bottom: 1rem;
         }
 
-        .hero h1 {
-          font-size: clamp(2.4rem, 5vw, 3.5rem);
-          line-height: 1.02;
-          max-width: 19ch;
-          margin-bottom: 1.25rem;
+        section h1 {
+          font-size: clamp(1rem, 2vw, 2rem);
+          line-height: 1.4;
         }
 
         .hero-description {
